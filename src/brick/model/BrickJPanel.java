@@ -94,6 +94,17 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 						int brickHeight = map.brickHeight;
 						
 						Rectangle rect = new Rectangle(brickX, brickY, brickWidth, brickHeight);
+						Rectangle ballRect = new Rectangle(ballposX, ballposY, 20, 20);
+						Rectangle brickRect = rect;
+						
+						if(ballRect.intersects(brickRect))
+						{
+							map.setBrickValue(0, i, j);
+							totalBricks--;
+							score += 5;
+							
+							
+						}
 					}
 				}
 			}
@@ -120,7 +131,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 
 	@Override
 	public void keyTyped(KeyEvent e) {}
-
+//Key input for paddle
 	@Override
 	public void keyPressed(KeyEvent e) 
 	{
