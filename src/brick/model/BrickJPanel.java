@@ -74,6 +74,20 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		g.setColor(Color.blue);
 		g.fillOval(ballposX, ballposY, 20, 20);
 		
+	//Win
+		if(totalBricks <= 0)
+		{
+			play = false;
+			ballXdir = 0;
+			ballYdir = 0;
+			g.setColor(Color.RED);
+			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.drawString("You Win Big Guy :)", 190, 300);
+			
+			g.setFont(new Font("serif", Font.BOLD, 20));
+			g.drawString("Press Enter to Restart", 230, 350);
+		}
+		
 		//Game Over
 		if(ballposY > 570)
 		{
@@ -186,9 +200,25 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 				{
 					moveLeft();
 				}
-		}
+			}
+			if(e.getKeyCode() == KeyEvent.VK_ENTER)
+			{
+				if(!play)
+				{
+					play = true;
+					ballposX = 120;
+					ballposY = 350;
+					ballXdir = -1;
+					ballYdir = -2;
+					playerX = 310;
+					score = 0;
+					totalBricks = 21;
+					map = new MapGenerator(3, 7);
+					
+					repaint();
+				}
+			}
 	}
-	
 	public void moveRight()
 	{
 		play = true;
