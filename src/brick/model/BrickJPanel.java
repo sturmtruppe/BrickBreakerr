@@ -35,8 +35,8 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
-		timer = new Timer(delay, this);
-		timer.start();
+//		timer = new Timer(delay, this);
+//		timer.start();
 	}
 	
 	public void paint(Graphics g)
@@ -52,13 +52,15 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		g.fillRect(691, 0, 3, 592);
 		
 		//Paddle
-		g.setColor(Color.green);
+		g.setColor(Color.white);
 		g.fillRect(playerX, 550, 100, 8);
 		
 		
 		//Ball
-		g.setColor(Color.yellow);
-		g.fillRect(ballposX, ballposY, 20, 20);
+		g.setColor(Color.blue);
+		g.fillOval(ballposX, ballposY, 20, 20);
+		
+		g.dispose();
 	}
 
 	@Override
