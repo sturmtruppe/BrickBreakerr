@@ -49,7 +49,16 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		g.setColor(Color.yellow);
 		g.fillRect(0, 0, 3, 592);
 		g.fillRect(0, 0, 692, 3);
-		g.fillRect(0, 0, 3, 592);
+		g.fillRect(691, 0, 3, 592);
+		
+		//Paddle
+		g.setColor(Color.green);
+		g.fillRect(playerX, 550, 100, 8);
+		
+		
+		//Ball
+		g.setColor(Color.yellow);
+		g.fillRect(ballposX, ballposY, 20, 20);
 	}
 
 	@Override
@@ -60,24 +69,22 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 	}
 
 	@Override
-	public void keyTyped(KeyEvent e) 
-	{
-		// TODO Auto-generated method stub
-		
-	}
+	public void keyTyped(KeyEvent e) {}
 
 	@Override
 	public void keyPressed(KeyEvent e) 
 	{
-		// TODO Auto-generated method stub
-		
+		if(e.getKeyCode() == KeyEvent.VK_RIGHT)
+		{
+			
+		}
+		if(e.getKeyCode() == KeyEvent.VK_LEFT)
+		{
+			
+		}
 	}
 
 	@Override
-	public void keyReleased(KeyEvent e) 
-	{
-		// TODO Auto-generated method stub
-		
-	}
+	public void keyReleased(KeyEvent e) {}
 
 }
