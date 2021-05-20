@@ -1,6 +1,7 @@
 package brick.model;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -59,6 +60,10 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		g.fillRect(0, 0, 692, 3);
 		g.fillRect(691, 0, 3, 592);
 		
+		//Score
+		g.setColor(Color.red);
+		g.setFont(new Font("serif", Font.BOLD, 25));
+		
 		//Paddle
 		g.setColor(Color.white);
 		g.fillRect(playerX, 550, 100, 8);
@@ -82,7 +87,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 				ballYdir = -ballYdir;
 			}
 			
-			for(int i = 0; i<map.map.length; i++)
+			A: for(int i = 0; i<map.map.length; i++)
 			{
 				for(int j = 0; j<map.map[0].length; j++)
 				{
@@ -111,6 +116,8 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 							{
 								ballYdir = -ballYdir;
 							}
+							
+							break A;
 						}
 					}
 				}
