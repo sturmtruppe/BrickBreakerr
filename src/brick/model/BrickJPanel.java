@@ -83,7 +83,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 			}
 			if(ballposY < 0)
 			{
-				ballydir = -ballYdir;
+				ballYdir = -ballYdir;
 			}
 			if(ballposX > 670)
 			{
