@@ -33,8 +33,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 	private int ballXdir = -1;
 	private int ballYdir = -2;
 	
-	private MapGenerator map;
-	
+
 	public BrickJPanel()
 	{
 		map = new MapGenerator(3, 7);
@@ -72,7 +71,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		
 		//Ball
 		g.setColor(Color.blue);
-		g.fillOval(ballposX, ballposY, 20, 20);
+		g.fillRect(ballposX, ballposY, 20, 20);
 		
 	//Win
 		if(totalBricks <= 0)
