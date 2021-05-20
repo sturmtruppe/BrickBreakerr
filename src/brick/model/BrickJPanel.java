@@ -67,6 +67,24 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 	public void actionPerformed(ActionEvent e) 
 	{
 		timer.start();
+		if(play)
+		{
+			ballposX += ballXdir;
+			ballposY += ballYdir;
+			if(ballposX < 0)
+			{
+				ballXdir = -ballXdir;
+			}
+			if(ballposY < 0)
+			{
+				ballXdir = -ballYdir;
+			}
+			if(ballposX < 0)
+			{
+				ballXdir = -ballXdir;
+			}
+		}
+		
 		repaint();
 		
 	}
