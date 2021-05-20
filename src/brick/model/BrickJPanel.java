@@ -74,6 +74,20 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		g.setColor(Color.blue);
 		g.fillOval(ballposX, ballposY, 20, 20);
 		
+		//Game Over
+		if(ballposY > 570)
+		{
+			play = false;
+			ballXdir = 0;
+			ballYdir = 0;
+			g.setColor(Color.RED);
+			g.setFont(new Font("serif", Font.BOLD, 25));
+			g.drawString("Game Over, Scores: ", 190, 300);
+			
+			g.setFont(new Font("serif", Font.BOLD, 25));
+			g.drawString("Press Enter to Restart", 230, 350);
+		}
+		
 		g.dispose();
 	}
 //Houses ball movement and brick physics
