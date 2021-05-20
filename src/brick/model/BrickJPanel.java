@@ -81,10 +81,10 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 			ballXdir = 0;
 			ballYdir = 0;
 			g.setColor(Color.RED);
-			g.setFont(new Font("serif", Font.BOLD, 25));
+			g.setFont(new Font("serif", Font.BOLD, 30));
 			g.drawString("Game Over, Scores: ", 190, 300);
 			
-			g.setFont(new Font("serif", Font.BOLD, 25));
+			g.setFont(new Font("serif", Font.BOLD, 20));
 			g.drawString("Press Enter to Restart", 230, 350);
 		}
 		
