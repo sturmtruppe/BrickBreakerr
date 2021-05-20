@@ -63,7 +63,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		//Score
 		g.setColor(Color.red);
 		g.setFont(new Font("serif", Font.BOLD, 25));
-		g.drawString(""+score, 590, 30);
+		g.drawString(""+score, 350, 30);
 		
 		//Paddle
 		g.setColor(Color.white);
@@ -81,10 +81,10 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 			ballXdir = 0;
 			ballYdir = 0;
 			g.setColor(Color.RED);
-			g.setFont(new Font("serif", Font.BOLD, 30));
+			g.setFont(new Font("Helvetica", Font.BOLD, 30));
 			g.drawString("You Win Big Guy :)", 190, 300);
 			
-			g.setFont(new Font("serif", Font.BOLD, 20));
+			g.setFont(new Font("Helvetica", Font.BOLD, 20));
 			g.drawString("Press Enter to Restart", 230, 350);
 		}
 		
@@ -95,11 +95,11 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 			ballXdir = 0;
 			ballYdir = 0;
 			g.setColor(Color.RED);
-			g.setFont(new Font("serif", Font.BOLD, 30));
-			g.drawString("Game Over, Scores: ", 190, 300);
+			g.setFont(new Font("Helvetica", Font.BOLD, 30));
+			g.drawString("UR GARBAGE KID LOL ", 190, 300);
 			
-			g.setFont(new Font("serif", Font.BOLD, 20));
-			g.drawString("Press Enter to Restart", 230, 350);
+			g.setFont(new Font("Helvetica", Font.BOLD, 20));
+			g.drawString("ENTER TO PLAY AGAIN", 230, 350);
 		}
 		
 		g.dispose();
@@ -222,12 +222,12 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 	public void moveRight()
 	{
 		play = true;
-		playerX+=20;
+		playerX+=100;
 	}
 	public void moveLeft()
 	{
 		play = true;
-		playerX-=20;
+		playerX-=100;
 	}
 	@Override
 	public void keyReleased(KeyEvent e) {}
