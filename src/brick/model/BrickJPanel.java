@@ -1,5 +1,7 @@
 package brick.model;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -17,7 +19,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 	private int totalBricks = 21;
 	
 	//Ball speed
-	private Timer time;
+	private Timer timer;
 	private int delay = 8;
 	
 	
@@ -28,11 +30,27 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 	private int ballXdir = -1;
 	private int ballYdir = -2;
 	
-	public ()
+	public BrickJPanel()
 	{
-		addKeyListener
+		addKeyListener(this);
+		setFocusable(true);
+		setFocusTraversalKeysEnabled(false);
+		timer = new Timer(delay, this);
+		timer.start();
 	}
 	
+	public void paint(Graphics g)
+	{
+		// background
+		g.setColor(Color.black);
+		g.fillRect(1, 1, 692, 592);
+		
+		//Game Borders
+		g.setColor(Color.yellow);
+		g.fillRect(0, 0, 3, 592);
+		g.fillRect(0, 0, 692, 3);
+		g.fillRect(0, 0, 3, 592);
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) 
