@@ -103,7 +103,14 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 							totalBricks--;
 							score += 5;
 							
-							
+							if(ballposX + 19 <= brickRect.x || ballposX + 1 >= brickRect.x + brickRect.width)
+							{
+								ballXdir = -ballXdir;
+							}
+							else
+							{
+								ballYdir = -ballYdir;
+							}
 						}
 					}
 				}
