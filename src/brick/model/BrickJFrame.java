@@ -4,5 +4,9 @@ import javax.swing.JFrame;
 
 public class BrickJFrame 
 {
-	JFrame obj = new JFrame();
+	public static void main(String[] args)
+	{
+		JFrame obj = new JFrame();
+		
+	}
 }	
