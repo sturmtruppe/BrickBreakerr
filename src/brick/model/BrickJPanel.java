@@ -23,7 +23,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 	
 	//Ball speed
 	private Timer timer;
-	private int delay = 8;
+	private int delay = 1;
 	
 	
 	private int playerX = 310;
@@ -63,6 +63,7 @@ public class BrickJPanel extends JPanel implements KeyListener, ActionListener
 		//Score
 		g.setColor(Color.red);
 		g.setFont(new Font("serif", Font.BOLD, 25));
+		g.drawString(""+score, 590, 30);
 		
 		//Paddle
 		g.setColor(Color.white);
