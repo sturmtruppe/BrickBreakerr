@@ -1,5 +1,6 @@
 package brick.model;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
@@ -33,6 +34,9 @@ public class MapGenerator
 					g.setColor(Color.green);
 					g.fillRect(j * brickWidth + 80, i * brickHeight + 50, brickWidth, brickHeight);
 					
+					g.setStroke(new BasicStroke(3));
+					g.setColor(Color.black);
+					g.drawRect(j * brickWidth + 80, i * brickHeight + 50, brickWidth, brickHeight);
 				}
 			}
 		}
